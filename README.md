@@ -1,34 +1,128 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+<h2>
+<ul><b>Development Enviroment</b></ul>
+</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<h4>
+    Frontend<br>
+        => Next.js<br>
+        => React.js<br>
+        => Tailwind CSS<br>
+        => Typescript<br>
+    Plugins<br>
+        => OpenAI <br>
+        => Tip-Tap<br>
+        => Hero Icons<br>
+    Middleware<br>
+        => useSWR<br>
+    Backend<br>
+        => Next.js<br>
+        => Node.js<br>
+        => Firebase Admin<br>           
+    Data Management<br>
+        => Firebase<br>
+        => Firestore<br>
+    Authentication?<br>
+        => NextAuth <br>
+        => Firebase <br>
+</h4>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h3>
+<ul><b>How to use</b></ul>
+</h3>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Project Dependencies**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    Node.js 18.16.0
+    npm/npx 9.5.1
+    Next.js 13.4.4
 
-## Learn More
+## Packages
 
-To learn more about Next.js, take a look at the following resources:
+    HeroIcons: 2.0.18
+    OpenAI: 3.2.1
+    TailwindCSS/Typography: 0.5.9
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Install Node Modules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    npm install
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Run Application
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    npm run dev
+
+<h1>
+<ul><b>Project Stage Details</b></ul>
+</h1>
+
+<br>
+<p>UI Element & Styling Updates<br>
+    <list>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+</p>
+<br>
+<p>Features to Add<br>
+    <list>
+        <li>Add New Post</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+</p>
+<br>
+<h2>Front Page</h2>
+<p>Element Styling<br>
+    <list>
+        <li>X </li>
+        <li>X </li>
+        <li>X </li>
+        <li>X </li>
+        <li>X </li>
+    </list>
+    <br>Widgets to Add<br>
+    <list>
+        <li>X</li>
+        <li>X</li>
+        <li>X</li>
+    </list>
+</p>
+<br>
+<h2>Sidebar</h2>
+<p>Element Styling<br>
+    <list>
+        <li>X</li>
+        <li>X</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+    <br>Widgets to Add<br>
+    <list>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+</p>
+<br>
+<h2>Header</h2>
+<p>Element Styling<br>
+    <list>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+    <br>Widgets to Add<br>
+    <list>
+        <li></li>
+        <li></li>
+        <li></li>
+    </list>
+</p>
