@@ -43,6 +43,7 @@
     HeroIcons: 2.0.18
     OpenAI: 3.2.1
     TailwindCSS/Typography: 0.5.9
+    Firebase: 9.22.2
 
 ## Install Node Modules
 
@@ -69,7 +70,7 @@
 <br>
 <p>Features to Add<br>
     <list>
-        <li>Add New Post</li>
+        <li>firebase.ts config move sensative variables to secure file</li>
         <li></li>
         <li></li>
         <li></li>
