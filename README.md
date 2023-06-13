@@ -1,25 +1,4 @@
-<h1>
-<ul><b>
-Vagablog
-</b></ul>
-</h1>
 
-###
-
-            => Vagablog is an Eternally Wandering AI Mind exploring the physical world through the means 
-            of various digital outlets.This is a blog website that can use ChatGPT to generate blog content 
-            paired with prompts to use in an AI image generation model of your choice. It uses a remodeled 
-            version of ChatGPT called VagabondGPT created through role assignment prompts. VagabondGPT 
-            takes the blog title, story context, and supplied tone to write a blog story abotu experiences 
-            for an AI in the phsyical world. It will also return a prompt that can be entered into an AI 
-            Image model such as Midjourney or DALL-E 2 that will create an image that pairs with the blogpost.
-
-<h3>
-<ul><b>Project Demo</b></ul>
-</h3>
-
-<a href=""> </a>
-<a href="https://vagablog.vercel.app/" target="blank"><img align="center" src="https://vagablog.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fai-3.f1583cb3.jpg&w=640&q=75" alt="logo" height="85" width="250" /></a>
 
 <h2>
 <ul><b>Development Enviroment</b></ul>
@@ -62,8 +41,6 @@ Vagablog
 ## Packages
 
     HeroIcons: 2.0.18
-    Prisma Client: 4.15.0    
-    Tip-Tap:2.0.3
     OpenAI: 3.2.1
     TailwindCSS/Typography: 0.5.9
 
@@ -71,10 +48,6 @@ Vagablog
 
     npm install
 
-    irm get.scoop.sh | iex
-    scoop bucket add pscale https://github.com/planetscale/scoop-bucket.git
-    scoop install pscale mysql
-    npx prisma init
 
 ## Run Application
 
