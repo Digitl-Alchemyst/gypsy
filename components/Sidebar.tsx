@@ -2,12 +2,25 @@
 'use client';
 
 import NewChat from './NewChat'
+import ChatRow from './ChatRow'
 import { useSession, signOut } from 'next-auth/react'
 import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
+import { collection, query as query, orderBy } from 'firebase/firestore';
+import { db } from '../firebase';
+import { useCollection } from 'react-firebase-hooks/firestore';
 
 function Sidebar() {
   const { data: session } = useSession();
 
+  const [chats, loading, error] = useCollection(
+    session && 
+    query(collection(db, 'users', session.user?.email!, 'chats'),
+    orderBy('createdAt', 'desc'),
+    )
+  );
+  console.log("🚀 ~ file: Sidebar.tsx:15 ~ Sidebar ~ chats:", chats)
+
+  
   return ( 
     <div className='p-2 flex flex-col h-screen'>
         <div className='flex-1'>            
@@ -20,6 +33,11 @@ function Sidebar() {
               </div>
 
                 {/* Map through the ChatRows */}
+                <div className='flex flex-col gap-2 mt-3'>
+                {chats?.docs.map(chat => (
+                  <ChatRow key={chat.id} id={chat.id} />
+                ))}
+                </div>
 
             </div>
         </div>

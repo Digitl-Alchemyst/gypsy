@@ -16,6 +16,7 @@
         => Hero Icons<br>
     Middleware<br>
         => useSWR<br>
+        => React Firebase Hooks<br>
     Backend<br>
         => Next.js<br>
         => Node.js<br>
@@ -44,6 +45,7 @@
     OpenAI: 3.2.1
     TailwindCSS/Typography: 0.5.9
     Firebase: 9.22.2
+    React Firebase Hooks: 5.1.1
 
 ## Install Node Modules
 
