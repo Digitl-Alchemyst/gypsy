@@ -4,6 +4,7 @@ import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import GPT from '../public/GPT.png'
 
+
 function Login() {
   return (
     <div className='bg-amber-950'>
@@ -16,7 +17,8 @@ function Login() {
       />
       
       <button 
-        onClick={() => signIn('google')}
+        onClick={() => signIn('google')} 
+        
         className="bg-slate-700 text-slate-200 font-bold text-3xl motion-safe:animate-pulse p-2 py-3 rounded-md shadow-md hover:bg-slate-500 hover:text-slate-100 border-2 border-slate-600"        
       >
         Sign In to use Gypsy
