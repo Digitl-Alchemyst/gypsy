@@ -26,7 +26,7 @@ function Sidebar() {
         {session && (
           <div 
             className='flex items-center p-2 gap-5 justify-between hover:bg-slate-700 rounded-md hover:shadow-md hover:border hover:border-slate-600/50 hover:cursor-pointer'
-            onClick={signOut}
+            onClick={() => signOut()}
           >
 
             <div className='flex gap-5 items-center'>
