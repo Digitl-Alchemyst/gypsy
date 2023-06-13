@@ -1,9 +1,8 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import SideBar from '@/components/Sidebar';
 import { SessionProvider } from '@/components/SessionProvider';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import Login from '@/components/Login';
 
 
