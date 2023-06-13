@@ -1,10 +1,8 @@
-// 'use client';
-
 import './globals.css';
 import SideBar from '@/components/Sidebar';
 import { SessionProvider } from '@/components/SessionProvider';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/pages/auth/[...nextauth]';
+import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import Login from '@/components/Login';
 
 
