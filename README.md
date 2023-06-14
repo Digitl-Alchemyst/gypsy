@@ -48,6 +48,7 @@
     Firebase: 9.22.2
     React Firebase Hooks: 5.1.1
     React Hot Toast: 2.4.1
+    OpenAI: 3.3.0
 
 ## Install Node Modules
 
