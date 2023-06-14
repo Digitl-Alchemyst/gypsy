@@ -4,6 +4,9 @@ import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import React from 'react'
 import { useSession } from 'next-auth/react';
 import { useState } from 'react';
+import { addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
+import { collection } from 'firebase/firestore';
 
 type Props = {
     chatId: string;
@@ -12,9 +15,53 @@ type Props = {
 function MessageInput({ chatId }: Props) {
     const [prompt, setPrompt] = React.useState('');
     const { data: session } = useSession();
+
+    // useSWR to get the model
+    const model = 'text-davinci-003';
+
+    const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!prompt) return;
+
+        const input = prompt.trim();
+        setPrompt('');
+
+        const message: Message = {
+            text: input,
+            createdAt: serverTimestamp(),
+            user: {
+                _id: session?.user?.email!,
+                name: session?.user?.name!,
+                avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name!}`,
+            }
+        };
+
+        await addDoc(
+            collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), 
+            message
+        );
+        
+        // Toast notification  for loading
+        await fetch(`/api/askQuestion`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                prompt: input, 
+                chatId, 
+                model, 
+                session
+             }),
+        }).then(() => {
+        // Toast notification for success
+        });
+
+    };
+
   return (
     <div className='bg-slate-600/60 text-slate-300 rounded-lg text-sm m-2 w-9/12 border border-slate-600'>
-        <form className='pl-5 pr-3 py-2 space-x-5 flex'>
+        <form onSubmit={sendMessage} className='pl-5 pr-3 py-2 space-x-5 flex'>
             <input 
                 type="text"
                 value={prompt}
