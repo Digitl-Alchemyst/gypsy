@@ -14,6 +14,7 @@
         => OpenAI <br>
         => Tip-Tap<br>
         => Hero Icons<br>
+        => React Hot Toast<br>
     Middleware<br>
         => useSWR<br>
         => React Firebase Hooks<br>
@@ -46,6 +47,7 @@
     TailwindCSS/Typography: 0.5.9
     Firebase: 9.22.2
     React Firebase Hooks: 5.1.1
+    React Hot Toast: 2.4.1
 
 ## Install Node Modules
 

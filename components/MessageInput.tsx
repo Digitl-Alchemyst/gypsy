@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import { collection } from 'firebase/firestore';
+import toast from 'react-hot-toast';
 
 type Props = {
     chatId: string;
@@ -42,6 +43,9 @@ function MessageInput({ chatId }: Props) {
         );
         
         // Toast notification  for loading
+        const notification = toast.loading('Chat GPT is thinking...');
+
+
         await fetch(`/api/askQuestion`, {
             method: 'POST',
             headers: {
@@ -55,6 +59,9 @@ function MessageInput({ chatId }: Props) {
              }),
         }).then(() => {
         // Toast notification for success
+            toast.success('Chat GPT has responded!', { 
+                id: notification 
+                });
         });
 
     };
