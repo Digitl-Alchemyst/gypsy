@@ -1,9 +1,15 @@
 import React from 'react'
+import { DocumentData } from 'firebase/firestore'
 
-function ChatMessage() {
+type Props = {
+    message: DocumentData;
+};
+
+function ChatMessage({ message }: Props) {
+
   return (
     <div>ChatMessage</div>
-  )
-}
+  );
+};
 
-export default ChatMessage
+export default ChatMessage;
