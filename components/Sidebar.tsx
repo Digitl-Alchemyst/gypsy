@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
+// 'use strict';
 
 import NewChat from './NewChat'
 import ChatRow from './ChatRow'
@@ -8,6 +9,8 @@ import { EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { collection, query as query, orderBy } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
+
+
 
 function Sidebar() {
   const { data: session } = useSession();
@@ -19,6 +22,16 @@ function Sidebar() {
     )
   );
   console.log("🚀 ~ file: Sidebar.tsx:15 ~ Sidebar ~ chats:", chats)
+
+  if (loading) {
+    // Render a loading state if data is still being fetched
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    // Render an error state if an error occurred while fetching data
+    return <div>Error: {error.message}</div>;
+  }
 
   
   return ( 

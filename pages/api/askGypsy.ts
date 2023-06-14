@@ -42,9 +42,9 @@ export default async function handler(
     text: response || 'GPT cant answer right now! Try again later...',
     createdAt: admin.firestore.Timestamp.now(),
     user: {
-      _id: 'gypsy',
-      name: 'Gypsy',
-      avatar: '{gypsy}',
+      _id: 'ChatGPT',
+      name: 'ChatGPT',
+      avatar: 'https://links.papareact.com/89k',
     },
   };
 

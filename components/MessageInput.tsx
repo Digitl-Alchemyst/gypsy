@@ -46,7 +46,8 @@ function MessageInput({ chatId }: Props) {
         const notification = toast.loading('Chat GPT is thinking...');
 
 
-        await fetch(`/api/askQuestion`, {
+        await fetch(`/api/askGypsy`, {
+        // await fetch(`/pages/api/askGypsy`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -60,7 +61,7 @@ function MessageInput({ chatId }: Props) {
         }).then(() => {
         // Toast notification for success
             toast.success('Chat GPT has responded!', { 
-                id: notification 
+                id: notification, 
                 });
         });
 
@@ -73,7 +74,7 @@ function MessageInput({ chatId }: Props) {
                 type="text"
                 value={prompt}
                 disabled={!session}
-                onChange={e => setPrompt(e.target.value)}
+                onChange={(e) => setPrompt(e.target.value)}
                 className='bg-transparent flex-1 focus:outline-none disabled:cursor-not-allowed disabled:text-slate-400'
                 placeholder="Type your message here..."
              />
