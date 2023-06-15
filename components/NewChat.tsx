@@ -6,6 +6,10 @@ import { useRouter } from "next/navigation"
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 import { db } from "../firebase"
 
+// type Props = {
+//   id: string;
+// };
+
 function NewChat() {
   const router = useRouter();
   const { data: session } = useSession();

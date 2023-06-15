@@ -20,7 +20,7 @@ function ChatPage({ params: { id } }: Props) {
       {/* Message Input Box  */}
       <MessageInput chatId={id} />
     </div>
-  )
+  );
 }
 
-export default ChatPage
+export default ChatPage;
