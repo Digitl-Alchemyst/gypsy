@@ -4,6 +4,7 @@ import admin from 'firebase-admin';
 import gypsy from '@/public/gypsy.png';
 import { adminDb } from '@/firebaseAdmin';
 
+
 type Data = {
   answer: string;
 };

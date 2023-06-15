@@ -8,19 +8,20 @@ import { addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import { collection } from 'firebase/firestore';
 import toast from 'react-hot-toast';
+import { FormEvent } from 'react';
 
 type Props = {
     chatId: string;
 };
 
 function MessageInput({ chatId }: Props) {
-    const [prompt, setPrompt] = React.useState('');
+    const [prompt, setPrompt] = useState('');
     const { data: session } = useSession();
 
     // useSWR to get the model
     const model = 'text-davinci-003';
 
-    const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
+    const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!prompt) return;
 
@@ -46,7 +47,7 @@ function MessageInput({ chatId }: Props) {
         const notification = toast.loading('Chat GPT is thinking...');
 
 
-        await fetch(`/api/askGypsy`, {
+        await fetch('/api/askGypsy', {
         // await fetch(`/pages/api/askGypsy`, {
             method: 'POST',
             headers: {

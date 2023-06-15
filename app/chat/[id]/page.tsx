@@ -9,7 +9,7 @@ type Props = {
   };
 };
 
-function ChatPage({ params: { id } }: Props) {
+function ChatPage({ params: { id }} : Props) {
     // console.log(props)
   
   return (
