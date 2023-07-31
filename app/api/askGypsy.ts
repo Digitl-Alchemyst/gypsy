@@ -9,15 +9,15 @@ type Data = {
   answer: string;
 };
 
-// type Message = {
-//   text: string;
-//   createdAt: admin.firestore.Timestamp;
-//   user: {
-//     _id: string;
-//     name: string;
-//     avatar: string;
-//   };
-// };
+type Message = {
+  text: string;
+  createdAt: admin.firestore.Timestamp;
+  user: {
+    _id: string;
+    name: string;
+    avatar: string;
+  };
+};
 
 // API Route
 export default async function handler(

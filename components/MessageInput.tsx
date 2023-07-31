@@ -10,6 +10,7 @@ import { collection } from 'firebase/firestore';
 import toast from 'react-hot-toast';
 import { FormEvent } from 'react';
 
+
 type Props = {
     chatId: string;
 };
@@ -46,8 +47,8 @@ function MessageInput({ chatId }: Props) {
         // Toast notification  for loading
         const notification = toast.loading('Chat GPT is thinking...');
 
-
         await fetch('/api/askGypsy', {
+        // await fetch('/app/api/askGypsy', {
         // await fetch(`/pages/api/askGypsy`, {
             method: 'POST',
             headers: {

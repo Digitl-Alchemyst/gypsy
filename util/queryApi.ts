@@ -10,8 +10,8 @@ const query = async (prompt: string, chatId: string, model: string) => {
             max_tokens: 550,
             temperature: 0.9, // Creativity factor 1 creative 0 logical
             top_p: 1,
-            presence_penalty: 0.6,
-            frequency_penalty: 0.6,
+            presence_penalty: 0.6, // the presence penalty is how often the AI is going to talk about the same topic
+            frequency_penalty: 0.6, // the frequency penalty is how often the AI is going to repeat itself
             // bestOf: 1,
             // n: 1,
             stream: true,
